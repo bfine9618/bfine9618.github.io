@@ -531,7 +531,7 @@ h3.w3l_head.two {
     -moz-background-size: cover;
     -o-background-size: cover;
     -ms-background-size: cover;
-       min-height: 690px;
+    min-height: 690px;
     padding-top: 9em;
 }
 .skill-agile h4 {
@@ -1160,8 +1160,8 @@ p.counter {
       font-size: 3em;
 	}
 	.skills {
-		min-height:550px;
-		    padding-top: 5em;
+		  min-height:550px;
+		  padding-top: 5em;
 	}
 	.skills.two {
 		    min-height: 421px;
@@ -1466,6 +1466,7 @@ p.counter {
 	}
 	.education-w3l {
 		padding: 2em 1em;
+        min-height:690px;
 	}
 	.education-agile-grids {
 		margin-top: 0.5em;
