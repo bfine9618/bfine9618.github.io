@@ -307,16 +307,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- gallery -->
 <div class="gallery_wthree" id="gallery">
  <div class="container">
-      <h3 class="w3_head w3_head1">My Projects <span>My latest work</span></h3>
+     <h3 class="w3_head w3_head1">My Projects <span>My latest work</span></h3>
 	  <div class="gallery_grid agileits_w3layouts">
 	    <div class="col-md-6  col-sm-6 col-xs-6 grid_w3">
 			<div class="grid-1">
-				<a class="cm-overlay" href="images/Data%20Anlysis.png">
-					<img src="images/gg1.jpg" alt=" " class="img-responsive" />
-					 <div class="w3agile-text w3agile-text-smal1">
+                <div class="img-responsive">
+                    <a class="cm-overlay" href='images/Data%20Anlysis.png'>
+                        <img src="images/gg1.jpg" alt="" class="img-responsive" />
+                        <div class="w3agile-text w3agile-text-smal1">
 						<h5 style='align-self: center'>Data Science <br/>&<br/> Machine Learning</h5>
-					</div>
-				</a>
+					   </div>
+                    </a>
+                </div>
 			</div>
 			 <div class="sub_grid gallery_w3l">
 				   <div class="col-md-6 col-sm-6 col-xs-6 grid-1 grid-c grid_w3l">
@@ -433,6 +435,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <!-- js -->
 <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+      modal.style.display = "none";
+    }
+    
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+</script>
 
 
 <!-- Navigation-JavaScript -->
@@ -545,7 +575,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		});
 	});
 </script>
-<!-- start-smoth-scrolling -->
+
+    <!-- start-smoth-scrolling -->
 	<!-- smooth scrolling -->
 	<script type="text/javascript">
 		$(document).ready(function() {
