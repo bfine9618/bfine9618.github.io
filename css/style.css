@@ -638,6 +638,7 @@ h3.w3_head.w3_head1 span {
     -o-transition: .5s ease-in;
     -ms-transition: .5s ease-in;
 }
+
 .agileits_services_grid:hover h5 {
     color: #0086fe;
 	transition: .5s ease-in;
@@ -1595,7 +1596,58 @@ a.callbacks_nav.callbacks1_nav.prev {
 	text-decoration:none;
     color: #fff;
 }
+
+/*--//Animating Portfolio Cards--*/
+.card{
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+	z-index: 1;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.card:hover{
+    padding: 2px;
+}
+
+.card:before {
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid #0086fe;
+    border-right: 2px solid #0086fe;
+}
+.card:after, .card:before {
+    content: '';
+    z-index: -1;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    position: absolute;
+    -webkit-transition: all 800ms ease-in-out;
+    -moz-transition: all 800ms ease-in-out;
+    -ms-transition: all 800ms ease-in-out;
+    -o-transition: all 800ms ease-in-out;
+    transition: all 800ms ease-in-out;
+}
+.card:after {
+    top: 0;
+    left: 0;
+    border-top: 2px solid #0086fe;
+    border-left: 2px solid #0086fe;
+}
+
+.card:hover:after, .card:hover:before {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+}
+
 /*--//footer--*/
+
 /*-- to-top --*/
 #toTop {
     display: none;
